@@ -242,18 +242,29 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+    }
+
     .nav-links {
-        display: none;
+        display: flex;
         flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 80px;
-        left: 0;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -100%;
         background-color: #ffffff;
+        transition: left 0.3s ease-in-out;
+        padding-top: 80px;
     }
 
     .nav-links.active {
-        display: flex;
+        left: 0;
     }
 
     .nav-links li {
@@ -263,6 +274,14 @@ footer {
 
     .hamburger {
         display: block;
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+        background-color: #ffffff;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .search-bar {
@@ -276,5 +295,10 @@ footer {
 
     .footer-links, .social-media, .newsletter {
         margin-bottom: 20px;
+    }
+
+    .btn {
+        padding: 15px 25px;
+        font-size: 16px;
     }
 }
